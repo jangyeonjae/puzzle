@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <script>
+        function click1() {
+        let block1 = document.getElementById("block1");
+        let block1Num = block1.innerText;
+        let block2 = document.getElementById("block2");
+        let block2Num = block2.innerText;
+
+        let save;
+
+
+        if(block2Num ==''){
+            block1.textContent = block2Num;
+            block2.textContent = block1Num;
+            save = block1Num;
+            block1Num = block2Num;
+            block2Num = save;
+
+           
+        }
+    }
+
+    function click2() {
+        let block1 = document.getElementById("block1");
+        let block1Num = block1.innerText;
+        let block2 = document.getElementById("block2");
+        let block2Num = block2.innerText;
+        let block3 = document.getElementById("block3");
+        let block3Num = block3.innerText;
+
+        let save;
+
+        if(block1Num ==''){
+            block2.textContent = block1Num;
+            block1.textContent = block2Num;
+            save = block2Num;
+            block2Num = block1Num;
+            block1Num = save;
+            
+        }else if(block3Num ==''){
+            block2.textContent = block3Num;
+            block3.textContent = block2Num;
+            save = block2Num;
+            block2Num = block3Num;
+            block3Num = save;
+
+            
+        }
+    }
+
+    function click3() {
+        let block2 = document.getElementById("block2");
+        let block2Num = block2.innerText;
+        let block3 = document.getElementById("block3");
+        let block3Num = block3.innerText;
+
+        let save;
+
+
+        if(block2Num ==''){
+            block3.textContent = block2Num;
+            block2.textContent = block3Num;
+            save = block3Num;
+            block3Num = block2Num;
+            block2Num = save;
+
+           
+        }
+    }
+
+    
+    </script>
+    <title>3*3퍼즐</title>
+</head>
+<body>
+
+    <div>
+        <table>
+            <tr>
+                <td><div class="block" onclick="click1()"><p id="block1">1</p></div></td>
+                <td><div class="block" onclick="click2()"><p id="block2">2</p></div></td>
+                <td><div class="block" onclick="click3()"><p id="block3"></p></div></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
